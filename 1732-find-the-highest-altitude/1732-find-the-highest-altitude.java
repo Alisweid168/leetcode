@@ -5,7 +5,6 @@ class Solution {
         for(int i=0;i<gain.length;i++){
             res[i+1]=res[i]+gain[i];
         } 
-        Arrays.sort(res);
-        return res[gain.length];
+        return Arrays.stream(res).max().orElse(0);
     }
 }
